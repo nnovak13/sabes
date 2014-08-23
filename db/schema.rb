@@ -11,10 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140822193318) do
+ActiveRecord::Schema.define(version: 20140823220946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: true do |t|
+    t.string   "article_title"
+    t.string   "article_body"
+    t.string   "article_img"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "artists", force: true do |t|
+    t.integer  "user_id",            null: false
+    t.string   "name"
+    t.string   "bio"
+    t.string   "artist_image_main"
+    t.string   "artist_image_thumb"
+    t.string   "contact_email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "artists", ["user_id"], name: "index_artists_on_user_id", using: :btree
+
+  create_table "items", force: true do |t|
+    t.integer  "artists_id"
+    t.string   "item_title"
+    t.decimal  "price",              default: 0.0, null: false
+    t.integer  "quantity_available"
+    t.string   "description"
+    t.string   "item_img_main"
+    t.string   "item_img_thumb"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "items", ["artists_id"], name: "index_items_on_artists_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
