@@ -1,4 +1,7 @@
 Artist.delete_all
+Item.delete_all
+
+
 #ARTISTS
 
 gabby = Artist.create(name: "Gabby Lopez", bio: "Gabrielle Lopez was born in Kingston, Jamaica.  At a very young age, she moved to Rhode Island to live with her mother’s family. Lopez currently attends Rhode Island College working on her BFA in Metalsmithing and Jewelry Design.  Her work explores the concept of energy release through motion and physical interaction with her pieces.", artist_image_main: "http://www.gabriellelopezmetals.com/uploads/2/5/6/7/25677216/1335125_orig.jpg", artist_image_thumb: "http://www.gabriellelopezmetals.com/uploads/2/5/6/7/25677216/1390099894.png", contact_email: "gabriellezalopez@gmail.com" )
@@ -18,8 +21,51 @@ richie = Artist.create(name: "Richie Stewart", bio: "The following is a real con
 
 
 Artist.all.each do 
-
   puts "Created #{Artist.name}"
-
-
 end
+
+
+
+
+# ITEMS
+
+
+#Gabby
+
+peel_earings = Item.create(artists_id: 44, item_title: "Orange Peel Earings", price: 40.00, quantity_available: 15, description: "Handcrafted by G. Lopez.", item_img_main: "orange_peel_earings.jpg", item_img_thumb: "orange_peel_earings.jpg")
+
+
+crescent_earings = Item.create(artists_id: 44, item_title: "Crescent Earings", price: 50.00, quantity_available: 15, description: "Handcrafted by G. Lopez.", item_img_main: "crescent_earings.jpg", item_img_thumb: "crescent_earings_thumb.jpg")
+
+wind_ring = Item.create(artists_id: 44, item_title: "Wind Ring", price: 74.00, quantity_available: 1, description: "One of a kind. Handcrafted by G. Lopez.", item_img_main: "davinci.jpg", item_img_thumb: "davinci_thumb.jpg")
+
+
+
+# Rory
+
+xxiii_print = Item.create(artists_id: 45, item_title: "XXIII Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"XXIII\".", item_img_main: "xxiii.jpg", item_img_thumb: "xxiii.jpg")
+
+woods_print = Item.create(artists_id: 45, item_title: "Woods Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"Woods\".", item_img_main: "woods.jpg", item_img_thumb: "woods.jpg")
+
+woods_painting = Item.create(artists_id: 45, item_title: "Woods Painting", price: 100.00, quantity_available: 1, description: "Purchase Rory's Original \"Woods\" painting.", item_img_main: "woods.jpg", item_img_thumb: "woods.jpg")
+
+faces_print = Item.create(artists_id: 45, item_title: "Faces Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"Faces\".", item_img_main: "faces.jpg", item_img_thumb: "faces.jpg")
+
+faces_painting = Item.create(artists_id: 45, item_title: "Faces Painting", price: 18.00, quantity_available: 1, description: "Purchase Rory's Original \"Faces\" painting.", item_img_main: "faces.jpg", item_img_thumb: "faces.jpg")
+
+
+
+# Phil
+
+dust = Item.create(artists_id: 49, item_title: "Dust", price: 40.00, quantity_available: 10, description: "DUST is an \“art book\” of new photographs by Phil Elverum. There are no words. There is no narrative. These are clear images of a world in color, moments of depth and eeriness found on solitary walks and international drives. The images were made at home (Anacortes, Wash.) and all over the world (in the quiet moments found during Mount Eerie tours), but the where is not the point. The point is the breath of the unknown that a strange new image can breathe from a page if one sits still and looks at it.They are arranged in pairs, the page spreads building a crucial interplay that creates a third, invisible, internal world as one looks, prompting a wordless conversation between the two images and the viewer. Pairs of rich and mysterious photographs, beautifully printed and bound in black stamped coarse linen. Inside the back cover is a secondary booklet containing 48 photographs.", item_img_main: "http://31.media.tumblr.com/c32a415457a659043c2cca2c8fb62828/tumblr_n7nueuCyRU1rx4hiao1_1280.gif", item_img_thumb: "http://images.insound.com/303/INS133963.jpg")
+
+
+
+
+
+
+
+
+
+
+
