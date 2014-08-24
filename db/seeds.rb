@@ -1,8 +1,9 @@
 Artist.delete_all
 Item.delete_all
+Article.delete_all
 
 
-#ARTISTS
+### ARTISTS
 
 gabby = Artist.create(name: "Gabby Lopez", bio: "Gabrielle Lopez was born in Kingston, Jamaica.  At a very young age, she moved to Rhode Island to live with her mother’s family. Lopez currently attends Rhode Island College working on her BFA in Metalsmithing and Jewelry Design.  Her work explores the concept of energy release through motion and physical interaction with her pieces.", artist_image_main: "http://www.gabriellelopezmetals.com/uploads/2/5/6/7/25677216/1335125_orig.jpg", artist_image_thumb: "http://www.gabriellelopezmetals.com/uploads/2/5/6/7/25677216/1390099894.png", contact_email: "gabriellezalopez@gmail.com" )
 
@@ -20,52 +21,62 @@ phil = Artist.create(name: "Phil Elverum", bio: "I was born in 1978. I come from
 richie = Artist.create(name: "Richie Stewart", bio: "The following is a real conversation: Me: Hey Richie. It’d be great if you could send me some background info. about yourself so I can include a bio in the materials for your event. Richie: Sure. How about this?: “Designer / Letterer / Detail Obsesser / Founder of Commoner, Inc.” Me: Can you send me a bit more? People will want to know more about you. Ya know - they need a reason to get up at 8:30 in the morning. How about some more background, as well as a list of your clients?“ Richie: …Okay, how about this? \"The world is fucking ugly. It’s up to all of us to find the beauty that’s been buried underneath all the bullshit and share it with other people. That’s how I pay my rent.\” Me: I’ll just write it myself. So come listen to Richie Stewart - designer, letterer, detail obsesser, and found of Commoner, Inc. - share his own story of how he went from perpetual school-skipper to “working class” designer, having worked with clients such as Nike, CNN, Miller Lite, Market Basket, Sebago, Johnny Cupcakes, Salvation Army, Atlas Ventures, and the Hunger Games movie.", artist_image_main: "https://d13yacurqjgara.cloudfront.net/users/22225/screenshots/1031550/attachments/124548/B.jpg", artist_image_thumb: "https://pbs.twimg.com/profile_images/475726157581533184/kClHLuGA.jpeg", contact_email: "" )
 
 
-Artist.all.each do 
-  puts "Created #{Artist.name}"
+Artist.all.each do |a|
+  puts "Created #{a.name}"
 end
 
 
 
 
-# ITEMS
+### ITEMS
 
 
 #Gabby
 
-peel_earings = Item.create(artists_id: 44, item_title: "Orange Peel Earings", price: 40.00, quantity_available: 15, description: "Handcrafted by G. Lopez.", item_img_main: "orange_peel_earings.jpg", item_img_thumb: "orange_peel_earings.jpg")
+peel_earings = Item.create(artists_id: 44, item_title: "Orange Peel Earings", price: 40.00, quantity_available: 15, description: "Handcrafted by G. Lopez.", item_img_main: "../img/orange_peel_earings.jpg", item_img_thumb: "../img/orange_peel_earings.jpg")
 
 
-crescent_earings = Item.create(artists_id: 44, item_title: "Crescent Earings", price: 50.00, quantity_available: 15, description: "Handcrafted by G. Lopez.", item_img_main: "crescent_earings.jpg", item_img_thumb: "crescent_earings_thumb.jpg")
+crescent_earings = Item.create(artists_id: 44, item_title: "Crescent Earings", price: 50.00, quantity_available: 15, description: "Handcrafted by G. Lopez.", item_img_main: "../img/crescent_earings.jpg", item_img_thumb: "../img/crescent_earings_thumb.jpg")
 
-wind_ring = Item.create(artists_id: 44, item_title: "Wind Ring", price: 74.00, quantity_available: 1, description: "One of a kind. Handcrafted by G. Lopez.", item_img_main: "davinci.jpg", item_img_thumb: "davinci_thumb.jpg")
+wind_ring = Item.create(artists_id: 44, item_title: "Wind Ring", price: 74.00, quantity_available: 1, description: "One of a kind. Handcrafted by G. Lopez.", item_img_main: "../img/davinci.jpg", item_img_thumb: "../img/davinci_thumb.jpg")
 
 
 
 # Rory
 
-xxiii_print = Item.create(artists_id: 45, item_title: "XXIII Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"XXIII\".", item_img_main: "xxiii.jpg", item_img_thumb: "xxiii.jpg")
+xxiii_print = Item.create(artists_id: 45, item_title: "XXIII Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"XXIII\".", item_img_main: "../img/xxiii.jpg", item_img_thumb: "../img/xxiii.jpg")
 
-woods_print = Item.create(artists_id: 45, item_title: "Woods Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"Woods\".", item_img_main: "woods.jpg", item_img_thumb: "woods.jpg")
+woods_print = Item.create(artists_id: 45, item_title: "Woods Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"Woods\".", item_img_main: "../img/woods.jpg", item_img_thumb: "../img/woods.jpg")
 
-woods_painting = Item.create(artists_id: 45, item_title: "Woods Painting", price: 100.00, quantity_available: 1, description: "Purchase Rory's Original \"Woods\" painting.", item_img_main: "woods.jpg", item_img_thumb: "woods.jpg")
+woods_painting = Item.create(artists_id: 45, item_title: "Woods Painting", price: 100.00, quantity_available: 1, description: "Purchase Rory's Original \"Woods\" painting.", item_img_main: "../img/woods.jpg", item_img_thumb: "../img/woods.jpg")
 
-faces_print = Item.create(artists_id: 45, item_title: "Faces Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"Faces\".", item_img_main: "faces.jpg", item_img_thumb: "faces.jpg")
+faces_print = Item.create(artists_id: 45, item_title: "Faces Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"Faces\".", item_img_main: "../img/faces.jpg", item_img_thumb: "../img/faces.jpg")
 
-faces_painting = Item.create(artists_id: 45, item_title: "Faces Painting", price: 18.00, quantity_available: 1, description: "Purchase Rory's Original \"Faces\" painting.", item_img_main: "faces.jpg", item_img_thumb: "faces.jpg")
+faces_painting = Item.create(artists_id: 45, item_title: "Faces Painting", price: 18.00, quantity_available: 1, description: "Purchase Rory's Original \"Faces\" painting.", item_img_main: "../img/faces.jpg", item_img_thumb: "../img/faces.jpg")
 
 
 
 # Phil
 
-dust = Item.create(artists_id: 49, item_title: "Dust", price: 40.00, quantity_available: 10, description: "DUST is an \“art book\” of new photographs by Phil Elverum. There are no words. There is no narrative. These are clear images of a world in color, moments of depth and eeriness found on solitary walks and international drives. The images were made at home (Anacortes, Wash.) and all over the world (in the quiet moments found during Mount Eerie tours), but the where is not the point. The point is the breath of the unknown that a strange new image can breathe from a page if one sits still and looks at it.They are arranged in pairs, the page spreads building a crucial interplay that creates a third, invisible, internal world as one looks, prompting a wordless conversation between the two images and the viewer. Pairs of rich and mysterious photographs, beautifully printed and bound in black stamped coarse linen. Inside the back cover is a secondary booklet containing 48 photographs.", item_img_main: "http://31.media.tumblr.com/c32a415457a659043c2cca2c8fb62828/tumblr_n7nueuCyRU1rx4hiao1_1280.gif", item_img_thumb: "http://images.insound.com/303/INS133963.jpg")
+dust = Item.create(artists_id: 49, item_title: "Dust", price: 40.00, quantity_available: 10, description: "DUST is an \“art book\” of new photographs by Phil Elverum. There are no words. There is no narrative. These are clear images of a world in color, moments of depth and eeriness found on solitary walks and international drives. The images were made at home (Anacortes, Wash.) and all over the world (in the quiet moments found during Mount Eerie tours), but the where is not the point. The point is the breath of the unknown that a strange new image can breathe from a page if one sits still and looks at it.They are arranged in pairs, the page spreads building a crucial interplay that creates a third, invisible, internal world as one looks, prompting a wordless conversation between the two images and the viewer. Pairs of rich and mysterious photographs, beautifully printed and bound in black stamped coarse linen. Inside the back cover is a secondary booklet containing 48 photographs.", item_img_main: "../img/dust_img_main.gif", item_img_thumb: "../img/dust_img_thumb.jpg")
+
+
+Item.all.each do |i|
+  puts "Created #{i.item_title}"
+end
 
 
 
+### ARTICLES
 
 
+intro_article = Article.create(article_title: "First Article", article_body: "Hey now, you're an allstart, get your game on, go play. Hey now, you're a rockstar, get the show on, get paid. Now, all that glitters is gold, something something stars sprinkle mold? It\'s a cool place, and they say it gets colder. You\'re bundled up now, wait till you get older! The meteor men BEG TO DIFFER!!! (Judging by the hole in the satilite picture). The ice we skate, ITS GETTIN PRETTY THIN. Water's gettin warm, so you might as well swim. MY WORLD IS ON FIRE, how about yours? That's the way I like it, and I never get bored.", article_img: "http://csbj.com/files/2013/01/smash.jpg", artist_id: 45)
 
 
+elverum_playlist_article = Article.create(article_title: "#AwesomeShit", article_body: "Next week, we talk with Phil Elverum Phil Elverum of Mount Eerie/The Microphones. We talk about his new photography book, \"Dust\", music, life. All the good stuff. All of it. Until then, take a look at this playlist he's posted to accompany some of the art from \"Dust\" (insert link).", article_img: "http://csbj.com/files/2013/01/smash.jpg", artist_id: 49)
 
+gabby_gallery_article = Article.create(article_title: "Event: G. Lopez Gallery", article_body: "Here ye, Providence. The Fucking Amazing Gabby Lopez will be hosting a gallery opening at the Biltmore this week. The exhibit will be open erry-day from 10 to 8, so go see that shit, because. I mean, if you, like, have time and stuff.", article_img: "http://csbj.com/files/2013/01/smash.jpg", artist_id: 44)
 
-
-
+Article.all.each do |ar|
+  puts "Created #{ar.article_title}"
+end
