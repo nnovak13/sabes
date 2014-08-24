@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'annotate'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'factory_girl_rails'
