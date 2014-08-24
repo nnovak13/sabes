@@ -1,5 +1,4 @@
-# == Schema Information
-#
+class ItemSerializer < ActiveModel::Serializer
 # Table name: items
 #
 #  id                 :integer          not null, primary key
@@ -13,10 +12,7 @@
 #  created_at         :datetime
 #  updated_at         :datetime
 #
-
-class Item < ActiveRecord::Base
-  belongs_to :artist
-  belongs_to :collections
-  belongs_to :order
-  has_many :tags, as: :taggable
+  attributes :id, :artist_id, :item_title, :price, :quantity_available, :description,
+    :item_img_main, :item_img_thumb
+    # Not sure if I need the artist_id here because it won't be shown...
 end

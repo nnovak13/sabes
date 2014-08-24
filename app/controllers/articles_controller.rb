@@ -1,5 +1,7 @@
 class ArticlesController <ApplicationController
-  respond_to :json
+  def default_serializer_options
+    {root: false}
+  end
 
   def index
     @articles = Articles.all
