@@ -2,7 +2,8 @@ class ArticlesController <ApplicationController
   respond_to :json
 
   def index
-    render :json
+    @articles = Articles.all
+    render json: @articles
   end
 
 end
