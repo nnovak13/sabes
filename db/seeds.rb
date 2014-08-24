@@ -1,3 +1,4 @@
+Artist.delete_all
 #ARTISTS
 
 gabby = Artist.create(name: "Gabby Lopez", bio: "Gabrielle Lopez was born in Kingston, Jamaica.  At a very young age, she moved to Rhode Island to live with her mother’s family. Lopez currently attends Rhode Island College working on her BFA in Metalsmithing and Jewelry Design.  Her work explores the concept of energy release through motion and physical interaction with her pieces.", artist_image_main: "http://www.gabriellelopezmetals.com/uploads/2/5/6/7/25677216/1335125_orig.jpg", artist_image_thumb: "http://www.gabriellelopezmetals.com/uploads/2/5/6/7/25677216/1390099894.png", contact_email: "gabriellezalopez@gmail.com" )
@@ -18,7 +19,7 @@ richie = Artist.create(name: "Richie Stewart", bio: "The following is a real con
 
 Artist.all.each do 
 
-  puts "Created #{name} who is #{artists_id}"
+  puts "Created #{Artist.name}"
 
 
 end
