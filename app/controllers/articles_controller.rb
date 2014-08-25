@@ -4,7 +4,7 @@ class ArticlesController <ApplicationController
   end
 
   def index
-    @articles = Articles.all
+    @articles = Article.all
     render json: @articles
   end
 
