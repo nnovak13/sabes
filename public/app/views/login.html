@@ -1,0 +1,17 @@
+<body ng-app="Sabesapp">
+
+<div ng-controller="LoginController" >
+    <form ng-submit = "login()">
+        <input ng-model="firstName" type="text"> First name <br/>
+        <input ng-model="lastName" type="text"> Last name <br/>
+        <input ng-model="email" type="email"> Email <br/>
+        <input ng-model="password" type="password"> Password <br/>
+    </form>
+
+    <div>
+        {{firstName}}
+        {{lastName}}
+        {{email}}
+        {{password}}
+    </div>
+</div>
