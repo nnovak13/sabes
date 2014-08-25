@@ -1,4 +1,3 @@
-
 sabesApp.factory('artistsFactory',['$http',function($http){
   var factory = {};
 

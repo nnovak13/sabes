@@ -20,5 +20,10 @@ sabesApp.config(['$routeProvider', function($routeProvider){
       controller: 'ArtistsCtrl',
       templateUrl: 'app/views/artists.html'
     })
+    .when('/articles',
+    {
+      controller: 'ArticlesCtrl',
+      templateUrl: 'app/views/articles.html'
+    })
     .otherwise({redirectTo: '/home'});
 }]);
