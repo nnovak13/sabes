@@ -1,4 +1,4 @@
-sabresApp.factory('itemsFactory',['$http',function($http){
+sabesApp.factory('itemsFactory',['$http',function($http){
   var factory = {};
 
   factory.getItems = function (){

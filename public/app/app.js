@@ -10,5 +10,10 @@ sabesApp.config(['$routeProvider', function($routeProvider){
     {
       templateUrl: 'app/views/home.html'
     })
+    .when('/items',
+    {
+      controller: 'ItemsCtrl',
+      templateUrl: 'app/views/items.html'
+    })
     .otherwise({redirectTo: '/home'});
 }]);

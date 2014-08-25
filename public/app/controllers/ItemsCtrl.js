@@ -1,4 +1,4 @@
-sabesApp.controller('StudentCtrl',['$scope','itemsFactory', function($scope, itemsFactory){
+sabesApp.controller('ItemsCtrl',['$scope','itemsFactory', function($scope, itemsFactory){
   function init(){
     itemsFactory.getItems()
       .success(function(items){
