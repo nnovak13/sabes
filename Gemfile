@@ -42,6 +42,8 @@ gem 'devise'
 gem 'annotate'
 gem 'active_model_serializers'
 
+gem 'angular_rails_csrf'
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
