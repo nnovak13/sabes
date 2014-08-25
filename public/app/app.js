@@ -3,7 +3,7 @@
 var sabesApp = angular.module('sabesApp', ['ngRoute', 'Devise']);
 
 //Routing
-sabesApp.config(['$routeProvider', function($routeProvider){
+sabesApp.config('$routeProvider', function($routeProvider){
   // path -> view -> controller
   $routeProvider
     .when('/login',
