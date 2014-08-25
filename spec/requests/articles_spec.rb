@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Articles API Call' do
   it 'sends a json of Articles' do
-    FactoryGirl.create_list(:article,3)
+    articles = FactoryGirl.create_list(:article,3)
 
     get '/articles'
     expect(response).to be_success
