@@ -2,14 +2,14 @@
 #
 # Table name: artists
 #
-#  id                 :integer          not null, primary key
-#  name               :string(255)
-#  bio                :text
-#  artist_image_main  :string(255)
-#  artist_image_thumb :string(255)
-#  contact_email      :string(255)
-#  created_at         :datetime
-#  updated_at         :datetime
+#  id            :integer          not null, primary key
+#  name          :string(255)
+#  bio           :text
+#  contact_email :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
+#  img_main      :string(255)
+#  img_thumb     :string(255)
 #
 
 class Artist < ActiveRecord::Base

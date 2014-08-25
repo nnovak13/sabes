@@ -3,15 +3,15 @@
 # Table name: items
 #
 #  id                 :integer          not null, primary key
-#  artists_id         :integer
-#  item_title         :string(255)
 #  price              :decimal(, )      default(0.0), not null
 #  quantity_available :integer
-#  description        :string(255)
-#  item_img_main      :string(255)
-#  item_img_thumb     :string(255)
+#  description        :text
 #  created_at         :datetime
 #  updated_at         :datetime
+#  artist_id          :integer
+#  img_thumb          :string(255)
+#  img_main           :string(255)
+#  title              :string(255)
 #
 
 class Item < ActiveRecord::Base

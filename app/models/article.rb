@@ -2,13 +2,13 @@
 #
 # Table name: articles
 #
-#  id            :integer          not null, primary key
-#  article_title :string(255)
-#  article_body  :string(255)
-#  article_img   :string(255)
-#  created_at    :datetime
-#  updated_at    :datetime
-#  artist_id     :integer
+#  id         :integer          not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#  artist_id  :integer
+#  title      :string(255)
+#  img        :string(255)
+#  body       :text
 #
 
 class Article < ActiveRecord::Base
