@@ -1,6 +1,6 @@
 'use strict';
 
-var sabesApp = angular.module('sabesApp', ['ngRoute']);
+var sabesApp = angular.module('sabesApp', ['ngRoute', 'Devise']);
 
 //Routing
 sabesApp.config(['$routeProvider', function($routeProvider){
