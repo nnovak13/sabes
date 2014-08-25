@@ -6,6 +6,11 @@ var sabesApp = angular.module('sabesApp', ['ngRoute', 'Devise']);
 sabesApp.config(['$routeProvider', function($routeProvider){
   // path -> view -> controller
   $routeProvider
+    .when('/login',
+    {
+      templateUrl: 'app/views/login.html',
+      controller: LoginController
+    })
     .when('/home',
     {
       templateUrl: 'app/views/home.html'
