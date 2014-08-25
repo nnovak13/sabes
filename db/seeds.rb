@@ -41,7 +41,7 @@ woods_print = Item.create(artist_id: rory.id, item_title: "Woods Print", price: 
 
 woods_painting = Item.create(artist_id: rory.id, item_title: "Woods Painting", price: 100.00, quantity_available: 1, description: "Purchase Rory's Original \"Woods\" painting.", item_img_main: "../img/woods.jpg", item_img_thumb: "../img/woods.jpg")
 
-faces_print = Item.create(artist_id: rory.id, item_title: "Faces Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"Faces\".", item_img_main: "../img/faces.jpg", item_img_thumb: "../img/faces.jpg")
+faces_print = Item.create(artist_id: rory.id, item_title: "Faces Print", price: 18.00, quantity_available: 25, description: "Print of Rory's \"Faces\".", item_img_main: "app/assets/images/faces.jpg", item_img_thumb: "app/assets/images/faces.jpg")
 
 faces_painting = Item.create(artist_id: rory.id, item_title: "Faces Painting", price: 18.00, quantity_available: 1, description: "Purchase Rory's Original \"Faces\" painting.", item_img_main: "../img/faces.jpg", item_img_thumb: "../img/faces.jpg")
 

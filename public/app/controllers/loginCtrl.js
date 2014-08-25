@@ -1,13 +1,23 @@
-var LoginController = function(Auth, $scope) {
+var LoginController = function(Auth, $scope, $location) {
+
 
 
   $scope.login = function() {
     Auth.login({email: $scope.email, password: $scope.password, firstname: $scope.firstname, lastname: $scope.lastname })
+    .then(function(user){
+      $scope.isLoggedIn = true;
+      $location.path("/home")
 
-    .then(function(user)
-      
-    });
+    })
+  }
 
+  $scope.signup = function() {
+    Auth.register({email: $scope.email, password: $scope.password, firstname: $scope.firstname, lastname: $scope.lastname })
+    .then(function(user){
+      $location.path("/home")
+
+    })
+  }
 
   // Auth.login(credentials)
   //   .then(function(user) {
@@ -24,8 +34,9 @@ var LoginController = function(Auth, $scope) {
   //           // user logged in by Auth.login({...})
   //       });
 
+  console.log("in loginCtrl.js");
 };
 
-LoginController.$inject = [ "Auth", "$scope"]
+LoginController.$inject = [ "Auth", "$scope", "$location"]
 
 angular.module("sabesApp").controller("LoginController", LoginController)
