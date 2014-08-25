@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824144436) do
+ActiveRecord::Schema.define(version: 20140825144647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20140824144436) do
   end
 
   create_table "items", force: true do |t|
-    t.integer  "artists_id"
     t.string   "item_title"
     t.decimal  "price",              default: 0.0, null: false
     t.integer  "quantity_available"
@@ -47,9 +46,8 @@ ActiveRecord::Schema.define(version: 20140824144436) do
     t.string   "item_img_thumb"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "artist_id"
   end
-
-  add_index "items", ["artists_id"], name: "index_items_on_artists_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
