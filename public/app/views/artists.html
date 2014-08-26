@@ -7,6 +7,7 @@
 <div class="row">
   <div class="large-10 large-offset-1 columns">
     <div ng-repeat="artist in artists">
+      <img src={{artist.img_main}} height="250" width="300">
       <h4 class="artistHead"> {{artist.name}} </h4>
       <p class="artistBody"> {{artist.bio}} </p>
     </div>
