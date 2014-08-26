@@ -3,7 +3,7 @@
   <div ng-controller="LoginController" >
       <form ng-submit = "signup()">
         <div class="row">
-          <h1> Sign Up, pweeze </h1>
+          <h1> Sign Up </h1>
         </div>
 
           <p>First name <br/>
@@ -18,12 +18,12 @@
 
           Email <br/>
           <div class="row">
-            <div class="small-3 columns"><input ng-model="email" type="email"></div>
+            <div class="small-3 columns"><input ng-model="email" id="email" type="text" name="email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}"></div>
           </div>
 
           Password <br/><br/>
           <div class = "row">
-            <div class="small-3 columns"><input ng-model="password" type="password"></div>
+            <div class="small-3 columns"><input ng-model="password" type="password" name="password"></div>
           </div>
 
           <!-- <div> reviewForm is {{reviewForm.$valid}} </div> -->
