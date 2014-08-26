@@ -1,13 +1,24 @@
 'use strict';
 
-var sabesApp = angular.module('sabesApp', ['ngRoute']);
+var sabesApp = angular.module('sabesApp', ['ngRoute', 'Devise']);
 
 //Routing
-sabesApp.config(['$routeProvider', function($routeProvider){
+sabesApp.config('$routeProvider', function($routeProvider){
   // path -> view -> controller
   $routeProvider
+    .when('/login',
+    {
+      controller: "LoginController",
+      templateUrl: 'app/views/login.html'
+    })
+    .when('/signup',
+    {
+      controller: "LoginController",
+      templateUrl: 'app/views/signup.html'
+    })
     .when('/home',
     {
+      controller: "HomeController",
       templateUrl: 'app/views/home.html'
     })
     .when('/items',
@@ -26,4 +37,6 @@ sabesApp.config(['$routeProvider', function($routeProvider){
       templateUrl: 'app/views/articles.html'
     })
     .otherwise({redirectTo: '/home'});
+
+
 }]);

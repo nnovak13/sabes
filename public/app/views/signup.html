@@ -1,0 +1,50 @@
+<body ng-app="Sabesapp">
+
+
+<div class="large-8 columns">
+  <div ng-controller="LoginController" >
+      <form ng-submit = "signup()">
+
+        <div class="row">
+          <h1> Sign Up, pweeze </h1>
+        </div>
+
+          <p>First name <br/>
+          <div class = "row">
+            <div class="small-3 columns"><input ng-model="firstName" type="text"></div>
+          </div>
+
+          Last name <br/><br/>
+          <div class = "row">
+            <div class="small-3 columns"><input ng-model="lastName" type="text"></div>
+          </div>
+
+
+          Email <br/>
+          <div class="row">
+            <div class="small-3 columns"><input ng-model="email" type="email"></div>
+          </div>
+
+          Password <br/><br/>
+          <div class = "row">
+            <div class="small-3 columns"><input ng-model="password" type="password"></div>
+          </div>
+
+
+          <!-- <div> reviewForm is {{reviewForm.$valid}} </div> -->
+
+          <div class = "row">
+          <button type ="submit"> Submit </button>
+
+          </div>
+
+      </form>
+
+      <div>
+          {{firstName}}
+          {{lastName}} <br/>
+          {{email}} <br/>
+          {{password}}
+      </div>
+  </div>
+</div>

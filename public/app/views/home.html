@@ -1,6 +1,33 @@
-<div class="home">
-  <h1> this is the home page </h1>
-  <a href='#/items'> Go to items </a> <br>
-  <a href='#/artists'> Go to artists </a><br>
-  <a href='#/articles'> Go to articles </a>
+<body ng-app="Sabesapp">
+
+<div ng-controller="HomeController" >
+  <div class="home">
+    <h1> this is the home page </h1>
+    <a href='#/items'> Go to items </a> <br>
+    <a href='#/artists'> Go to artists </a><br>
+    <a href='#/articles'> Go to articles </a>
+  </div>
+
+
+
+
+   <div class="sign_and_login" ng-show="!isLoggedIn">
+     <a id="signin" ng-href="../#/signup">SignUp</a><br />
+     <a id="login" ng-href="../#/login">LogIn</a> <br />
+  </div>
+
+  <div class="log_out" ng-show="isLoggedIn">
+    <a ng-click="logout()" href="../#/home">LogOut</a> <br />
+  </div>
+
 </div>
+
+<!--
+
+         <% if user_signed_in? %>
+               <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+           <% else %>
+             <li><%= link_to "Sign up", new_user_registration_path%></li>
+             <li><%= link_to "Login", new_user_session_path %></li>
+           <% end %> -->
