@@ -1,4 +1,14 @@
-<h1> Artists page ! </h1>
-<ul ng-repeat="artist in artists">
-  <li> Artist: {{artist.name}}</li>
-</ul>
+<div class="row">
+  <div class="large-10 large-offset-1 columns">
+      <h1> Artists</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-10 large-offset-1 columns">
+    <div ng-repeat="artist in artists">
+      <h4 class="artistHead"> {{artist.name}} </h4>
+      <p class="artistBody"> {{artist.bio}} </p>
+    </div>
+  </div>
+</div>

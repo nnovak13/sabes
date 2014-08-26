@@ -1,6 +1,17 @@
-<h1> Items page! </h1>
 
-<ul ng-repeat="item in items">
-  <li> Item: {{item.title}}</li>
+<div class="row">
+  <div class="large-10 large-offset-1 columns">
+      <h1> Items Page </h1>
+  </div>
+</div>
 
-</ul>
+<div class="row">
+  <div class="large-10 large-offset-1 columns">
+    <div ng-repeat="item in items">
+      <h4 class="itemTitle"> {{item.title}} </h4>
+      <p class="itemDescription"> {{item.description}} <br>
+      Price: {{item.price}} </p>
+    </div>
+  </div>
+</div>
+s
