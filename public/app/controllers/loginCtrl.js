@@ -6,18 +6,18 @@ var LoginController = function(Auth, $scope, $location) {
     Auth.login({email: $scope.email, password: $scope.password, firstname: $scope.firstname, lastname: $scope.lastname })
     .then(function(user){
       $scope.isLoggedIn = true;
-      $location.path("/home")
+      $location.path("/home");
 
-    })
-  }
+    });
+  };
 
   $scope.signup = function() {
     Auth.register({email: $scope.email, password: $scope.password, firstname: $scope.firstname, lastname: $scope.lastname })
     .then(function(user){
-      $location.path("/home")
+      $location.path("/home");
 
-    })
-  }
+    });
+  };
 
   // Auth.login(credentials)
   //   .then(function(user) {
@@ -37,6 +37,6 @@ var LoginController = function(Auth, $scope, $location) {
   console.log("in loginCtrl.js");
 };
 
-LoginController.$inject = [ "Auth", "$scope", "$location"]
+LoginController.$inject = [ "Auth", "$scope", "$location"];
 
-angular.module("sabesApp").controller("LoginController", LoginController)
+angular.module("sabesApp").controller("LoginController", LoginController);

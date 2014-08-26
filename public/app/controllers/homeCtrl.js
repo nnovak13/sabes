@@ -22,9 +22,9 @@ $scope.logout = function() {
 
   });
 };
-}
+};
 
 
-HomeController.$inject = [ "Auth", "$scope", "$location"]
+HomeController.$inject = [ "Auth", "$scope", "$location"];
 
-angular.module("sabesApp").controller("HomeController", HomeController)
+angular.module("sabesApp").controller("HomeController", HomeController);
