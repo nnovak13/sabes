@@ -1,15 +1,22 @@
-<div class="row">
-  <div class="large-10 large-offset-1 columns">
-      <h1> Artists</h1>
-  </div>
-</div>
-
-<div class="row">
-  <div class="large-10 large-offset-1 columns">
-    <div ng-repeat="artist in artists">
-      <img src={{artist.img_main}} height="250" width="300">
-      <h4 class="artistHead"> {{artist.name}} </h4>
-      <p class="artistBody"> {{artist.bio}} </p>
+<div class="contrainer">
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+        <h1> Artists</h1>
     </div>
+    <div class="col-lg-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+      <ul ng-repeat="artist in artists">
+        <li class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+          <img src={{artist.img_thumb}} height="350" width="350">
+          <h4 class="artistHead"> {{artist.name}} </h4>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-1"></div>
   </div>
 </div>
